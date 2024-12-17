@@ -34,17 +34,17 @@ public class Clothing
     }
 }
 
-class Accesory : Clothing
+class Accesory
 {
     private string type = "Accessory";
 }
 
-class Main : Clothing
+class Main
 {
     private string type = "Main";
 }
 
-class Collar : Clothing
+class Collar
 {
     private string type = "Collar";
 }
