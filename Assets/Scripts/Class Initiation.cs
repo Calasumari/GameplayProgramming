@@ -18,37 +18,6 @@ public class Puppy
     }
 }
 
-public class Clothing
-{
-    public string name, speciality;
-    public int cute, cool, fun, smart;
-
-    public Clothing(string clothingName, string clothingSpeciality, int cutePoints, int coolPoints, int funPoints, int smartPoints)
-    {
-        name = clothingName;
-        speciality = clothingSpeciality;
-        cute = cutePoints;
-        cool = coolPoints;
-        fun = funPoints;
-        smart = smartPoints;
-    }
-}
-
-class Accesory
-{
-    private string type = "Accessory";
-}
-
-class Main
-{
-    private string type = "Main";
-}
-
-class Collar
-{
-    private string type = "Collar";
-}
-
 public class Show
 {
     public string type;
