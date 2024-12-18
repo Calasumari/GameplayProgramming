@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -26,12 +29,17 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
+
+        transform.position = new Vector2(rb.position.x, rb.position.y);
+
+        if ((rb.position.x < -8) && (rb.position.x > -9) && (rb.position.y < -35) && (rb.position.y > -36))
+        {
+            SceneManager.LoadScene("Fashion Show");
+        }
+
         flip();
 
-        if (IsFinished())
-        {
-            Application.Quit();
-        }
+       
     }
 
     private void FixedUpdate()
@@ -39,12 +47,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
     }
-
-    private bool IsFinished()
-    {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, finishLayer);
-    }
-    
+   
 
     private bool IsGrounded()
     {
