@@ -1,18 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Button ButtonName;
+
+    public void ButtonTest()
     {
-        
+        if (ButtonName.name == "Pet")
+        {
+            Debug.Log(message: "Pet Button Pressed");
+        }
+        else if (ButtonName.name == "Play")
+        {
+            Debug.Log(message: "Play Button Pressed");
+        }
+        else
+        {
+            Debug.Log(message: "Feed Button Pressed");
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ButtonTest2()
     {
-        
+        Debug.Log(message: "Button Pressed again");
     }
 }
