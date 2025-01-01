@@ -8,6 +8,8 @@ public class CuteClothing : MonoBehaviour
     public int CoolPoints;
     public int FunPoints;
     public int SmartPoints;
+    public string Name;
+    public string Type;
 
     // Start is called before the first frame update
     void Start()
