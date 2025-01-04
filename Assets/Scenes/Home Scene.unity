@@ -240,14 +240,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358d46cca43492d4ca8fab84dedf13b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Ethel: {fileID: 0}
   ButtonName: {fileID: 0}
-  petButton: Not Pressed
-  playButton: Not Pressed
-  feedButton: Not Pressed
-  ethelButton: Not Pressed
-  honeyButton: Not Pressed
-  tanButton: Not Pressed
-  continueButton: Not Pressed
+  petPressed: 0
+  playPressed: 0
+  feedPressed: 0
+  ethelButton: 0
+  honeyButton: 0
+  tanButton: 0
+  continueButton: 0
 --- !u!1 &633247075
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,14 +534,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358d46cca43492d4ca8fab84dedf13b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Ethel: {fileID: 0}
   ButtonName: {fileID: 886622632}
-  petButton: Not Pressed
-  playButton: Not Pressed
-  feedButton: Not Pressed
-  ethelButton: Not Pressed
-  honeyButton: Not Pressed
-  tanButton: Not Pressed
-  continueButton: Not Pressed
+  petPressed: 0
+  playPressed: 0
+  feedPressed: 0
+  ethelButton: 0
+  honeyButton: 0
+  tanButton: 0
+  continueButton: 0
 --- !u!1 &886776766
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,8 +621,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886776766}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -264.5, y: -19.7, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -373.9, y: -54.1, z: 0}
   m_LocalScale: {x: 7.335666, y: 7.335666, z: 7.335666}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -638,12 +640,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b9c692f569a674887621e6c707dfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DogObject: {fileID: 0}
   Name: Ethel
   Breed: Akita
   Colour: Black and white
   Size: Large
   Age: 2
   Friendship: 0
+--- !u!1001 &904371291
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3185791173316670990, guid: 2e509a913d27ded4793db0d6dde91b23, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7.419894
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185791173316670990, guid: 2e509a913d27ded4793db0d6dde91b23, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7.419894
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185791173316670990, guid: 2e509a913d27ded4793db0d6dde91b23, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 7.419894
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185791173316670990, guid: 2e509a913d27ded4793db0d6dde91b23, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -268.082
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185791173316670990, guid: 2e509a913d27ded4793db0d6dde91b23, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -17.318
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185791173316670990, guid: 2e509a913d27ded4793db0d6dde91b23, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185791173316670990, guid: 2e509a913d27ded4793db0d6dde91b23, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185791173316670990, guid: 2e509a913d27ded4793db0d6dde91b23, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185791173316670990, guid: 2e509a913d27ded4793db0d6dde91b23, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185791173316670990, guid: 2e509a913d27ded4793db0d6dde91b23, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185791173316670990, guid: 2e509a913d27ded4793db0d6dde91b23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185791173316670990, guid: 2e509a913d27ded4793db0d6dde91b23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185791173316670990, guid: 2e509a913d27ded4793db0d6dde91b23, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926148412726065850, guid: 2e509a913d27ded4793db0d6dde91b23, type: 3}
+      propertyPath: m_Name
+      value: Ethel (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2e509a913d27ded4793db0d6dde91b23, type: 3}
 --- !u!1 &922358013
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,6 +1032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b9c692f569a674887621e6c707dfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DogObject: {fileID: 0}
   Name: Honey
   Breed: Golden Retiever
   Colour: Golden
@@ -1299,7 +1372,7 @@ Transform:
   m_GameObject: {fileID: 1302119725}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -264.5, y: -19.7, z: -0.1}
+  m_LocalPosition: {x: -373.9, y: -54.1, z: -0.1}
   m_LocalScale: {x: 7.335666, y: 7.335666, z: 7.335666}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1827,14 +1900,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358d46cca43492d4ca8fab84dedf13b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Ethel: {fileID: 0}
   ButtonName: {fileID: 1617795154}
-  petButton: Not Pressed
-  playButton: Not Pressed
-  feedButton: Not Pressed
-  ethelButton: Not Pressed
-  honeyButton: Not Pressed
-  tanButton: Not Pressed
-  continueButton: Not Pressed
+  petPressed: 0
+  playPressed: 0
+  feedPressed: 0
+  ethelButton: 0
+  honeyButton: 0
+  tanButton: 0
+  continueButton: 0
 --- !u!1 &1638607181
 GameObject:
   m_ObjectHideFlags: 0
@@ -2094,6 +2168,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708579390}
   m_CullTransparentMesh: 1
+--- !u!1 &1795141904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1795141905}
+  m_Layer: 0
+  m_Name: ActiveDogPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1795141905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795141904}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -264.5, y: -19.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1795175248
 GameObject:
   m_ObjectHideFlags: 0
@@ -2240,14 +2345,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358d46cca43492d4ca8fab84dedf13b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Ethel: {fileID: 0}
   ButtonName: {fileID: 1795175253}
-  petButton: Not Pressed
-  playButton: Not Pressed
-  feedButton: Not Pressed
-  ethelButton: Not Pressed
-  honeyButton: Not Pressed
-  tanButton: Not Pressed
-  continueButton: Not Pressed
+  petPressed: 0
+  playPressed: 0
+  feedPressed: 0
+  ethelButton: 0
+  honeyButton: 0
+  tanButton: 0
+  continueButton: 0
 --- !u!1 &1806676320
 GameObject:
   m_ObjectHideFlags: 0
@@ -2395,14 +2501,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358d46cca43492d4ca8fab84dedf13b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Ethel: {fileID: 0}
   ButtonName: {fileID: 1806676325}
-  petButton: Not Pressed
-  playButton: Not Pressed
-  feedButton: Not Pressed
-  ethelButton: Not Pressed
-  honeyButton: Not Pressed
-  tanButton: Not Pressed
-  continueButton: Not Pressed
+  petPressed: 0
+  playPressed: 0
+  feedPressed: 0
+  ethelButton: 0
+  honeyButton: 0
+  tanButton: 0
+  continueButton: 0
 --- !u!1 &1872554367
 GameObject:
   m_ObjectHideFlags: 0
@@ -2536,6 +2643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b9c692f569a674887621e6c707dfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DogObject: {fileID: 0}
   Name: Honey
   Breed: Golden Retiever
   Colour: Golden
@@ -2708,6 +2816,7 @@ SceneRoots:
   - {fileID: 1877876965}
   - {fileID: 1667938679}
   - {fileID: 886776768}
+  - {fileID: 1795141905}
   - {fileID: 1035019986}
   - {fileID: 1872920790}
   - {fileID: 13989369}
@@ -2717,3 +2826,4 @@ SceneRoots:
   - {fileID: 1638607182}
   - {fileID: 1892699370}
   - {fileID: 922358016}
+  - {fileID: 904371291}

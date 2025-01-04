@@ -6,31 +6,77 @@ using UnityEngine.SceneManagement;
 
 public class Button : MonoBehaviour
 {
+    public GameObject Ethel;
+    public GameObject Honey;
+    public GameObject Tangerine;
+
     [SerializeField] private Button ButtonName;
 
-    public string petButton = "Not Pressed";
+    /*public string petButton = "Not Pressed";
     public string playButton = "Not Pressed";
     public string feedButton = "Not Pressed";
     public string ethelButton = "Not Pressed";
     public string honeyButton = "Not Pressed";
     public string tanButton = "Not Pressed";
-    public string continueButton = "Not Pressed";
+    public string continueButton = "Not Pressed"; */
+
+    public bool petPressed, playPressed, feedPressed, ethelButton, honeyButton, tanButton, continueButton = false;
 
     public void ButtonTest()
     {
         if (ButtonName.name == "Pet")
         {
             Debug.Log(message: "Pet Button Pressed");
-            if (petButton == "Not Pressed")
-            {
-                petButton = "Pressed";
-            }
-            else
-            {
-                petButton = "NotPressed";
-            }
+            petPressed = !petPressed;
         }
-        else if (ButtonName.name == "Play")
+
+        if (ButtonName.name == "Play")
+        {
+            Debug.Log(message: "Play Button Pressed");
+            playPressed = !playPressed;
+        }
+
+
+        if (ButtonName.name == "Feed")
+        {
+            Debug.Log(message: "Feed Button Pressed");
+            feedPressed = !feedPressed;
+        }
+
+
+        if (ButtonName.name == "Ethel")
+        {
+            GameManager.Instance.selectedDog = Ethel;
+            Debug.Log(message: "Ethel button pressed");
+        }
+
+         
+        if (ButtonName.name == "Honey")
+        {
+            Debug.Log(message: "Play Button Pressed");
+            GameManager.Instance.selectedDog = Honey;
+            honeyButton = !honeyButton;
+        }
+
+        if (ButtonName.name == "Tangerine")
+        {
+            Debug.Log(message: "Tangerine Button Pressed");
+            GameManager.Instance.selectedDog = Honey;
+            tanButton = !tanButton;
+        }
+
+        if (ButtonName.name == "Continue")
+        {
+            SceneManager.LoadScene("Home Scene");
+        }
+
+        else if (ButtonName.name == "Show")
+        {
+            Debug.Log(message: "Showtime Button Pressed");
+            SceneManager.LoadScene("Fashion Show");
+        }
+
+        /*else if (ButtonName.name == "Play")
         {
             Debug.Log(message: "Play Button Pressed");
             if (playButton == "Not Pressed")
@@ -114,7 +160,7 @@ public class Button : MonoBehaviour
             {
                 feedButton = "Not Pressed";
             }
-        }
+        } */
 
     }
 

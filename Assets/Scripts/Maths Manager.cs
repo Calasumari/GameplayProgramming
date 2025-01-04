@@ -22,6 +22,8 @@ public class MathsManager : MonoBehaviour
 
     public string[] showTypes = { "Cool", "Cute", "Fun", "Smart" };
 
+    
+
     //public System.Random random = new System.Random();
     //int showSelection = random.Next(0,4);
 
@@ -33,19 +35,22 @@ public class MathsManager : MonoBehaviour
     {
 
         Debug.Log(message: MainPoints());
-        
-
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ((Pet.petButton == "Pressed")|(Play.playButton == "Pressed")|(Feed.feedButton == "Pressed")) 
+        // if ((Pet.petButton == "Pressed")|(Play.playButton == "Pressed")|(Feed.feedButton == "Pressed")) 
+        if (Pet.petPressed | Pet.playPressed | Pet.feedPressed)
         {
             Debug.Log(message: "Points are " + MainPoints() + ".");
             Debug.Log(message: "Points are " + CollarPoints() + ".");
             Debug.Log(message: "Bonus is " + AccessoryBonus() + ".");
+            Pet.petPressed = false;
+            Pet.playPressed = false;
+            Pet.feedPressed = false;
+
         }
     }
 
