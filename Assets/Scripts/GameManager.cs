@@ -7,9 +7,11 @@ public class GameManager : MonoBehaviour
 
     enum Show { Cute, Cool, Smart, Fun};
 
+    //keyvariables
 
 
     public GameObject selectedDog;
+
    
 
     private static GameManager instance;

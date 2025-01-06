@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoolClothes : MonoBehaviour
+public class Accessory : MonoBehaviour
 {
     public int CutePoints;
     public int CoolPoints;
@@ -11,8 +11,9 @@ public class CoolClothes : MonoBehaviour
     public string Name;
     public string Type;
 
-    // started as seperate scripts for every clothing but the maths manager means i can reduce it to one for each type
-    // all the code already uses "cute clothing" in scripts so i won't change the name
+    enum AccesoryName { Placeholder1, Placeholder2 };
+
+    // started as seperate scripts for every type of clothing but the maths manager means i can reduce it to one for each type
 
 
     // Start is called before the first frame update

@@ -8,13 +8,13 @@ using UnityEngine.UIElements;
 
 public class MathsManager : MonoBehaviour
 {
-    [SerializeField] private CuteClothing SkirtandBow;
+    [SerializeField] private Main SkirtandBow;
     [SerializeField] private Dog Honey;
     [SerializeField] private Dog Ethel;
     [SerializeField] private Dog Tangerine;
-    [SerializeField] private CuteClothing Main;
-    [SerializeField] private CuteClothing Collar;
-    [SerializeField] private CuteClothing Accessory;
+    [SerializeField] private Main Main;
+    [SerializeField] private Main Collar;
+    [SerializeField] private Main Accessory;
 
     [SerializeField] private Button Pet;
     [SerializeField] private Button Play;
@@ -47,6 +47,7 @@ public class MathsManager : MonoBehaviour
             Debug.Log(message: "Points are " + MainPoints() + ".");
             Debug.Log(message: "Points are " + CollarPoints() + ".");
             Debug.Log(message: "Bonus is " + AccessoryBonus() + ".");
+            Debug.Log(message: "Final Points are " + FinalScore() + ".");
             Pet.petPressed = false;
             Pet.playPressed = false;
             Pet.feedPressed = false;
@@ -230,5 +231,10 @@ public class MathsManager : MonoBehaviour
         addPoints = addPoints / 100;
 
         return addPoints;
+    }
+
+    public double FinalScore()
+    {
+        return MainPoints() + CollarPoints() * AccessoryBonus();
     }
 }

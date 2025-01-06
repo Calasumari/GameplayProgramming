@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FunClothes : MonoBehaviour
+public class Main : MonoBehaviour
 {
     public int CutePoints;
     public int CoolPoints;
@@ -11,7 +11,7 @@ public class FunClothes : MonoBehaviour
     public string Name;
     public string Type;
 
-    // started as seperate scripts for every clothing but the maths manager means i can reduce it to three - one for each type
+    // started as seperate scripts for every clothing but the maths manager means i can reduce it to one
     // all the code already uses "cute clothing" in scripts so i won't change the name
 
 
@@ -22,7 +22,7 @@ public class FunClothes : MonoBehaviour
     }
 
     // Update is called once per frame
-
+  
 
     public double PointsCalculation()
     {

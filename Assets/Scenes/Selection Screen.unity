@@ -175,6 +175,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ethel: {fileID: 0}
+  Honey: {fileID: 0}
+  Tangerine: {fileID: 0}
+  currentDog: Ethel
   ButtonName: {fileID: 279249366}
   petPressed: 0
   playPressed: 0
@@ -358,6 +361,62 @@ Transform:
   m_LocalPosition: {x: -5.22, y: -7.88, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &494458149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 494458151}
+  - component: {fileID: 494458150}
+  m_Layer: 0
+  m_Name: ButtonManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &494458150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494458149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 358d46cca43492d4ca8fab84dedf13b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ethel: {fileID: 1851351077}
+  Honey: {fileID: 846518257}
+  Tangerine: {fileID: 484454230}
+  currentDog: Ethel
+  ButtonName: {fileID: 494458150}
+  petPressed: 0
+  playPressed: 0
+  feedPressed: 0
+  ethelButton: 0
+  honeyButton: 0
+  tanButton: 0
+  continueButton: 0
+--- !u!4 &494458151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494458149}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4383997, y: -9.505792, z: 69.820724}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -642,6 +701,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ethel: {fileID: 0}
+  Honey: {fileID: 0}
+  Tangerine: {fileID: 484454230}
+  currentDog: Ethel
   ButtonName: {fileID: 657419225}
   petPressed: 0
   playPressed: 0
@@ -1304,6 +1366,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ethel: {fileID: 1851351077}
+  Honey: {fileID: 0}
+  Tangerine: {fileID: 0}
+  currentDog: Ethel
   ButtonName: {fileID: 1273613595}
   petPressed: 0
   playPressed: 0
@@ -1723,6 +1788,7 @@ MonoBehaviour:
   CurrentMain: {fileID: 0}
   CurrentCollar: {fileID: 0}
   CurrectAccessory: {fileID: 0}
+  GameManager: {fileID: 0}
 --- !u!4 &1965988142
 Transform:
   m_ObjectHideFlags: 0
@@ -1885,6 +1951,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ethel: {fileID: 0}
+  Honey: {fileID: 846518257}
+  Tangerine: {fileID: 0}
+  currentDog: Ethel
   ButtonName: {fileID: 1994350130}
   petPressed: 0
   playPressed: 0
@@ -1963,3 +2032,4 @@ SceneRoots:
   - {fileID: 1157495137}
   - {fileID: 1965988142}
   - {fileID: 1226766878}
+  - {fileID: 494458151}

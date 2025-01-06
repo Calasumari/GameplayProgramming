@@ -5,9 +5,9 @@ using UnityEngine;
 public class DogClothesManager : MonoBehaviour
 {
     [SerializeField] private Dog currentDog;
-    [SerializeField] private CuteClothing CurrentMain;
-    [SerializeField] private CuteClothing CurrentCollar;
-    [SerializeField] private CuteClothing CurrectAccessory;
+    [SerializeField] private Main CurrentMain;
+    [SerializeField] private Collar CurrentCollar;
+    [SerializeField] private Accessory CurrectAccessory;
     [SerializeField] private GameManager GameManager;
 
     // Start is called before the first frame update
