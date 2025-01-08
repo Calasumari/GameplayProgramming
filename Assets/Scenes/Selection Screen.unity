@@ -177,8 +177,10 @@ MonoBehaviour:
   Ethel: {fileID: 0}
   Honey: {fileID: 0}
   Tangerine: {fileID: 0}
+  ChosenDog: {fileID: 0}
   currentDog: Ethel
   ButtonName: {fileID: 279249366}
+  GameManager: {fileID: 0}
   petPressed: 0
   playPressed: 0
   feedPressed: 0
@@ -396,8 +398,10 @@ MonoBehaviour:
   Ethel: {fileID: 1851351077}
   Honey: {fileID: 846518257}
   Tangerine: {fileID: 484454230}
+  ChosenDog: {fileID: 846518260}
   currentDog: Ethel
   ButtonName: {fileID: 494458150}
+  GameManager: {fileID: 0}
   petPressed: 0
   playPressed: 0
   feedPressed: 0
@@ -703,8 +707,10 @@ MonoBehaviour:
   Ethel: {fileID: 0}
   Honey: {fileID: 0}
   Tangerine: {fileID: 484454230}
+  ChosenDog: {fileID: 0}
   currentDog: Ethel
   ButtonName: {fileID: 657419225}
+  GameManager: {fileID: 0}
   petPressed: 0
   playPressed: 0
   feedPressed: 0
@@ -924,6 +930,7 @@ GameObject:
   m_Component:
   - component: {fileID: 846518259}
   - component: {fileID: 846518258}
+  - component: {fileID: 846518260}
   m_Layer: 0
   m_Name: Honey
   m_TagString: Untagged
@@ -998,6 +1005,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &846518260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846518257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8b9c692f569a674887621e6c707dfd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DogObject: {fileID: 846518257}
+  Name: 
+  Breed: 
+  Colour: 
+  Size: 
+  Age: 0
+  Friendship: 0
 --- !u!1 &1157495135
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,8 +1394,10 @@ MonoBehaviour:
   Ethel: {fileID: 1851351077}
   Honey: {fileID: 0}
   Tangerine: {fileID: 0}
+  ChosenDog: {fileID: 0}
   currentDog: Ethel
   ButtonName: {fileID: 1273613595}
+  GameManager: {fileID: 0}
   petPressed: 0
   playPressed: 0
   feedPressed: 0
@@ -1953,8 +1981,10 @@ MonoBehaviour:
   Ethel: {fileID: 0}
   Honey: {fileID: 846518257}
   Tangerine: {fileID: 0}
+  ChosenDog: {fileID: 0}
   currentDog: Ethel
   ButtonName: {fileID: 1994350130}
+  GameManager: {fileID: 0}
   petPressed: 0
   playPressed: 0
   feedPressed: 0

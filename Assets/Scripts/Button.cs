@@ -20,12 +20,14 @@ public class Button : MonoBehaviour
     public GameObject Honey;
     public GameObject Tangerine;
 
+    [SerializeField] public Dog ChosenDog;
+
     public string currentDog = "Ethel";
 
     [SerializeField] private Button ButtonName;
     [SerializeField] private GameManager GameManager;
 
-    public bool petPressed, playPressed, feedPressed, ethelButton, honeyButton, tanButton, continueButton = false;
+    public bool petPressed, playPressed, feedPressed, ethelButton, honeyButton, tanButton, continueButton, switchTestButton = false;
 
     public void ButtonTest()
     {
@@ -55,6 +57,8 @@ public class Button : MonoBehaviour
             GameManager.Instance.selectedDog = Ethel;
             Debug.Log(message: "Ethel button pressed");
             currentDog = "Ethel";
+            ChosenDog.SetDog(0);
+            
         }
 
 
@@ -64,6 +68,7 @@ public class Button : MonoBehaviour
             GameManager.Instance.selectedDog = Honey;
             honeyButton = !honeyButton;
             currentDog = "Honey";
+            ChosenDog.SetDog(1);
         }
 
         if (ButtonName.name == "Tangerine")
@@ -72,12 +77,20 @@ public class Button : MonoBehaviour
             GameManager.Instance.selectedDog = Tangerine;
             tanButton = !tanButton;
             currentDog = "Tangerine";
+            ChosenDog.SetDog(2);
         }
 
         if (ButtonName.name == "Continue")
         {
             SceneManager.LoadScene("Home Scene");
         }
+
+        /* if (ButtonName.name == "DogSwitchTest")
+        {
+            Debug.Log(message: " Switch test pressed ");
+            switchTestButton = !switchTestButton;
+
+        } */
 
         else if (ButtonName.name == "Show")
         {

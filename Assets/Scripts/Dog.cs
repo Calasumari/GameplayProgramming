@@ -13,6 +13,20 @@ public class Dog : MonoBehaviour
     public int Age;
     public double Friendship;
 
+    string dogKey = "Dog";
+
+    public int CurrentDog { get; set; }
+
+    private void Awake()
+    {
+        CurrentDog = PlayerPrefs.GetInt(dogKey);
+    }
+
+    public void SetDog(int dog)          
+    {
+        PlayerPrefs.SetInt(dogKey, dog);
+    }
+
     public Dog(string DogName, string DogBreed, string DogColour, string DogSize, int DogAge, double DogFriendship)
     {
         Name = DogName;
@@ -23,9 +37,14 @@ public class Dog : MonoBehaviour
         Friendship = DogFriendship;
     }
 
+    Dog Ethel = new Dog("Ethel", "Akita", "Black and White", "big", 3, 0.00);
+    Dog Honey = new Dog("Honey", "Golden retriver", "Gold", "big", 3, 0.00);
+    Dog Tangerine = new Dog("Tangerine", "Corgi", "Orange", "small", 2, 0.00);
+
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(message: "Current Dog is " + CurrentDog);
     }
 
     // Update is called once per frame
