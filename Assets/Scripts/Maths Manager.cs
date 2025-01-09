@@ -13,8 +13,8 @@ public class MathsManager : MonoBehaviour
     [SerializeField] private Dog Ethel;
     [SerializeField] private Dog Tangerine;
     [SerializeField] private Main Main;
-    [SerializeField] private Main Collar;
-    [SerializeField] private Main Accessory;
+    [SerializeField] private Collar Collar;
+    [SerializeField] private Accessory Accessory;
 
     [SerializeField] private Button Pet;
     [SerializeField] private Button Play;

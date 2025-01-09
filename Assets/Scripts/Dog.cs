@@ -47,15 +47,57 @@ public class Dog : MonoBehaviour
         Debug.Log(message: "Current Dog is " + CurrentDog);
     }
 
-    // Update is called once per frame
-    void Update()
+    public Sprite[] spriteArray;
+
+    [SerializeField] private SpriteRenderer CurrentObject;
+    [SerializeField] private Button DogSwitchTest;
+
+    void ChangeSprite()
     {
-        
+        //changes it to honey
+        //if playerprefs.dog == 1
+        CurrentObject.sprite = spriteArray[1];
     }
 
-    public void Naming()
+    void ChangeSprite2()
     {
-        //User input using on screen text box, Name = input
-        //size/colour/age change depending on picked dog
+        //Changes it to Tangerine
+        //if playerprefs.dog == 2
+        CurrentObject.sprite = spriteArray[2];
+
+    }
+
+    void ChangeSprite3()
+    {
+        //Changes it to Ethel
+        //if playerprefs.dog == 0
+        CurrentObject.sprite = spriteArray[0];
+
+    }
+
+    void ReturnToDefault()
+    {
+        CurrentObject.sprite = spriteArray[0];
+    }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            ChangeSprite();
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            ChangeSprite2();
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            ChangeSprite3();
+        }
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            ReturnToDefault();
+        }
     }
 }

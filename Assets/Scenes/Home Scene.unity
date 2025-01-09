@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 501437803}
   - component: {fileID: 501437802}
   - component: {fileID: 501437801}
+  - component: {fileID: 501437804}
   m_Layer: 0
   m_Name: Collar
   m_TagString: Untagged
@@ -333,7 +334,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501437800}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc9040192b823694ba87b9c983bb0ca8, type: 3}
   m_Name: 
@@ -348,8 +349,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5213973ec2fbec64f97c0950f27cacc8, type: 3}
   - {fileID: 21300000, guid: 0de6ce478e602cc449ca4e77b3a442e1, type: 3}
   CurrentObject: {fileID: 0}
-  DogSwitchTest: {fileID: 0}
-  Ethel: {fileID: 0}
+  Main: {fileID: 0}
+  Collar: {fileID: 0}
+  Accessory: {fileID: 0}
+  DogSwitchTest: {fileID: 1482446111}
+  Ethel: {fileID: 886776769}
 --- !u!4 &501437803
 Transform:
   m_ObjectHideFlags: 0
@@ -365,6 +369,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &501437804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501437800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfdfc7c181c93934e864bf072ab0dc4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CutePoints: 0
+  CoolPoints: 0
+  FunPoints: 0
+  SmartPoints: 0
+  Name: 
+  Type: Collar
+  spriteArray:
+  - {fileID: 21300000, guid: 759d0add19862ac4ab8e18a1375f8156, type: 3}
+  - {fileID: 21300000, guid: 5275d81e9edfc4b4ba6a7ba77d4d23f5, type: 3}
+  - {fileID: 21300000, guid: de7e6f2ac2f2fb34d9877e0711760c97, type: 3}
+  - {fileID: 21300000, guid: 77f5d242c5645a249ab5de06851fda13, type: 3}
+  - {fileID: 21300000, guid: 1f33850bf2ec9ba4d951d13a121a771f, type: 3}
+  - {fileID: 21300000, guid: 706fd492e1efd0a469abb8fda4b49665, type: 3}
+  - {fileID: 21300000, guid: 5213973ec2fbec64f97c0950f27cacc8, type: 3}
+  - {fileID: 21300000, guid: 0de6ce478e602cc449ca4e77b3a442e1, type: 3}
+  CollarSprite: {fileID: 501437801}
+  DogSwitchTest: {fileID: 1482446111}
+  Ethel: {fileID: 886776769}
 --- !u!1 &633247075
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,6 +450,10 @@ MonoBehaviour:
   SmartPoints: 12
   Name: Placeholder Accessory
   Type: Accessory
+  spriteArray: []
+  MainSprite: {fileID: 0}
+  DogSwitchTest: {fileID: 0}
+  Ethel: {fileID: 0}
 --- !u!212 &633247078
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -770,6 +808,12 @@ MonoBehaviour:
   Size: Large
   Age: 2
   Friendship: 0
+  spriteArray:
+  - {fileID: 21300000, guid: 5b7574b5755aed841a9526859beb6827, type: 3}
+  - {fileID: 21300000, guid: ff8d466cba741ba4d9521334463ffd1e, type: 3}
+  - {fileID: 21300000, guid: f2a88bba05cdde44d879e88d5dda851f, type: 3}
+  CurrentObject: {fileID: 886776767}
+  DogSwitchTest: {fileID: 1482446111}
 --- !u!114 &886776770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,7 +821,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886776766}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc9040192b823694ba87b9c983bb0ca8, type: 3}
   m_Name: 
@@ -787,6 +831,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ff8d466cba741ba4d9521334463ffd1e, type: 3}
   - {fileID: 21300000, guid: f2a88bba05cdde44d879e88d5dda851f, type: 3}
   CurrentObject: {fileID: 886776767}
+  Main: {fileID: 1496206522}
+  Collar: {fileID: 501437801}
+  Accessory: {fileID: 950757759}
   DogSwitchTest: {fileID: 1482446111}
   Ethel: {fileID: 886776769}
 --- !u!1 &922358013
@@ -1086,6 +1133,7 @@ GameObject:
   - component: {fileID: 950757761}
   - component: {fileID: 950757760}
   - component: {fileID: 950757759}
+  - component: {fileID: 950757762}
   m_Layer: 0
   m_Name: Accessory
   m_TagString: Untagged
@@ -1152,7 +1200,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950757758}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc9040192b823694ba87b9c983bb0ca8, type: 3}
   m_Name: 
@@ -1167,8 +1215,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f4ad52f1dcf8cb54b9930de2ad3a3fcc, type: 3}
   - {fileID: 21300000, guid: c40e88e0e72a3454ba293f225af083a0, type: 3}
   CurrentObject: {fileID: 0}
-  DogSwitchTest: {fileID: 0}
-  Ethel: {fileID: 0}
+  Main: {fileID: 0}
+  Collar: {fileID: 0}
+  Accessory: {fileID: 0}
+  DogSwitchTest: {fileID: 1482446111}
+  Ethel: {fileID: 886776769}
 --- !u!4 &950757761
 Transform:
   m_ObjectHideFlags: 0
@@ -1184,6 +1235,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &950757762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950757758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041d2e154808d4445857171286a440f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CutePoints: 1
+  CoolPoints: 1
+  FunPoints: 1
+  SmartPoints: 1
+  Name: 
+  Type: 
+  spriteArray:
+  - {fileID: 21300000, guid: 8629d6de2aae8f74aae058be76695c5a, type: 3}
+  - {fileID: 21300000, guid: 8629d6de2aae8f74aae058be76695c5a, type: 3}
+  - {fileID: 21300000, guid: 66bb32455e080d741a3542fdf1f3a8cc, type: 3}
+  - {fileID: 21300000, guid: cb5864100f0dba0478e251ae3a5aa3f1, type: 3}
+  - {fileID: 21300000, guid: d1a7539ddf101ca4e90d723c0e56a6f5, type: 3}
+  - {fileID: 21300000, guid: e350fff8e5ff12644a5eba134addf96d, type: 3}
+  - {fileID: 21300000, guid: f4ad52f1dcf8cb54b9930de2ad3a3fcc, type: 3}
+  - {fileID: 21300000, guid: c40e88e0e72a3454ba293f225af083a0, type: 3}
+  AccessorySprite: {fileID: 950757759}
+  DogSwitchTest: {fileID: 1482446111}
+  Ethel: {fileID: 886776769}
 --- !u!1 &956006657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,6 +1436,9 @@ MonoBehaviour:
   Size: Large
   Age: 2
   Friendship: 0
+  spriteArray: []
+  CurrentObject: {fileID: 0}
+  DogSwitchTest: {fileID: 0}
 --- !u!212 &1035019985
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1937,6 +2021,10 @@ MonoBehaviour:
   SmartPoints: 13
   Name: Placeholder Collar
   Type: Collar
+  spriteArray: []
+  MainSprite: {fileID: 0}
+  DogSwitchTest: {fileID: 0}
+  Ethel: {fileID: 0}
 --- !u!212 &1494313493
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2000,6 +2088,7 @@ GameObject:
   - component: {fileID: 1496206521}
   - component: {fileID: 1496206523}
   - component: {fileID: 1496206522}
+  - component: {fileID: 1496206524}
   m_Layer: 0
   m_Name: Main
   m_TagString: Untagged
@@ -2081,7 +2170,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496206520}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc9040192b823694ba87b9c983bb0ca8, type: 3}
   m_Name: 
@@ -2091,13 +2180,46 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 55893fb50e1bfe74dbfd7b5b5826ed53, type: 3}
   - {fileID: 21300000, guid: 832657dac94e88a41b87729d45b2a0e0, type: 3}
   - {fileID: 21300000, guid: 7d3ba167cda368c4f92caa6183053bb0, type: 3}
-  - {fileID: 21300000, guid: f0f020b5ec5fa074db3af12f95124414, type: 3}
-  - {fileID: 21300000, guid: 80207dd9e8c12104880233b7c0d30935, type: 3}
   - {fileID: 21300000, guid: 8ff4d683db3be0d47a9582121273f131, type: 3}
   - {fileID: 21300000, guid: b3d6403f09333944ca2de4d6dbb55bc4, type: 3}
+  - {fileID: 21300000, guid: 80207dd9e8c12104880233b7c0d30935, type: 3}
+  - {fileID: 21300000, guid: f0f020b5ec5fa074db3af12f95124414, type: 3}
   CurrentObject: {fileID: 0}
-  DogSwitchTest: {fileID: 0}
-  Ethel: {fileID: 0}
+  Main: {fileID: 0}
+  Collar: {fileID: 0}
+  Accessory: {fileID: 0}
+  DogSwitchTest: {fileID: 1482446111}
+  Ethel: {fileID: 886776769}
+--- !u!114 &1496206524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496206520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8058ddb3857b7c43a53e5595dec6f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CutePoints: 20
+  CoolPoints: 0
+  FunPoints: 0
+  SmartPoints: 0
+  Name: 
+  Type: 
+  spriteArray:
+  - {fileID: 21300000, guid: 220430d831c81b94ea7e7824d0e24d0b, type: 3}
+  - {fileID: 21300000, guid: 55893fb50e1bfe74dbfd7b5b5826ed53, type: 3}
+  - {fileID: 21300000, guid: 832657dac94e88a41b87729d45b2a0e0, type: 3}
+  - {fileID: 21300000, guid: 7d3ba167cda368c4f92caa6183053bb0, type: 3}
+  - {fileID: 21300000, guid: 8ff4d683db3be0d47a9582121273f131, type: 3}
+  - {fileID: 21300000, guid: b3d6403f09333944ca2de4d6dbb55bc4, type: 3}
+  - {fileID: 21300000, guid: f0f020b5ec5fa074db3af12f95124414, type: 3}
+  - {fileID: 21300000, guid: 80207dd9e8c12104880233b7c0d30935, type: 3}
+  MainSprite: {fileID: 1496206522}
+  DogSwitchTest: {fileID: 1482446111}
+  Ethel: {fileID: 886776769}
 --- !u!1 &1567232452
 GameObject:
   m_ObjectHideFlags: 0
@@ -2944,6 +3066,10 @@ MonoBehaviour:
   SmartPoints: 30
   Name: Skirt and Bow
   Type: Main
+  spriteArray: []
+  MainSprite: {fileID: 0}
+  DogSwitchTest: {fileID: 0}
+  Ethel: {fileID: 0}
 --- !u!212 &1872554369
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3048,6 +3174,9 @@ MonoBehaviour:
   Size: Large
   Age: 2
   Friendship: 0
+  spriteArray: []
+  CurrentObject: {fileID: 0}
+  DogSwitchTest: {fileID: 0}
 --- !u!212 &1872920789
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3180,9 +3309,9 @@ MonoBehaviour:
   Honey: {fileID: 1035019984}
   Ethel: {fileID: 886776769}
   Tangerine: {fileID: 1872920788}
-  Main: {fileID: 0}
-  Collar: {fileID: 1494313492}
-  Accessory: {fileID: 633247077}
+  Main: {fileID: 1496206524}
+  Collar: {fileID: 501437804}
+  Accessory: {fileID: 950757762}
   Pet: {fileID: 886622632}
   Play: {fileID: 1806676325}
   Feed: {fileID: 1617795154}

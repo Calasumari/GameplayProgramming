@@ -19,7 +19,7 @@ public class Accessory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        AccessorySprite.sprite = null;
     }
 
     // Update is called once per frame
@@ -34,5 +34,99 @@ public class Accessory : MonoBehaviour
         double Smart = SmartPoints * 0.2;
 
         return (Cute + Cool + Fun + Smart);
+    }
+
+    public Sprite[] spriteArray;
+
+    [SerializeField] private SpriteRenderer AccessorySprite;
+    [SerializeField] private Button DogSwitchTest;
+    [SerializeField] private Dog Ethel;
+
+    //changes it to the outfits referenced in the method name
+
+    void cuteOutift()
+    {
+        AccessorySprite.sprite = spriteArray[0];
+    }
+
+    void cuteOutfitS()
+    {
+        AccessorySprite.sprite = spriteArray[1];
+    }
+
+    void coolOutfit()
+    {
+        AccessorySprite.sprite = spriteArray[2];
+    }
+
+    void coolOutfitS()
+    {
+        AccessorySprite.sprite = spriteArray[3];
+    }
+
+    void smartOutfit()
+    {
+        AccessorySprite.sprite = spriteArray[4];
+    }
+
+    void smartOutfitS()
+    {
+        AccessorySprite.sprite = spriteArray[6];
+    }
+
+    void funOutfit()
+    {
+        AccessorySprite.sprite = spriteArray[7];
+    }
+
+    void funOutfitS()
+    {
+        AccessorySprite.sprite = spriteArray[7];
+    }
+
+    void ReturnToDefault()
+    {
+        AccessorySprite.sprite = null;
+    }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            cuteOutift();
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            cuteOutfitS();
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            coolOutfit();
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            coolOutfitS();
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            smartOutfit();
+        }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            smartOutfitS();
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            funOutfit();
+        }
+        if (Input.GetKeyDown(KeyCode.Comma))
+        {
+            funOutfitS();
+        }
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            ReturnToDefault();
+        }
     }
 }

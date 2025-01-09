@@ -188,6 +188,7 @@ MonoBehaviour:
   honeyButton: 0
   tanButton: 0
   continueButton: 0
+  switchTestButton: 0
 --- !u!114 &279249367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,6 +410,7 @@ MonoBehaviour:
   honeyButton: 0
   tanButton: 0
   continueButton: 0
+  switchTestButton: 0
 --- !u!4 &494458151
 Transform:
   m_ObjectHideFlags: 0
@@ -707,7 +709,7 @@ MonoBehaviour:
   Ethel: {fileID: 0}
   Honey: {fileID: 0}
   Tangerine: {fileID: 484454230}
-  ChosenDog: {fileID: 0}
+  ChosenDog: {fileID: 846518260}
   currentDog: Ethel
   ButtonName: {fileID: 657419225}
   GameManager: {fileID: 0}
@@ -718,6 +720,7 @@ MonoBehaviour:
   honeyButton: 0
   tanButton: 0
   continueButton: 0
+  switchTestButton: 0
 --- !u!1 &750958569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,7 +1397,7 @@ MonoBehaviour:
   Ethel: {fileID: 1851351077}
   Honey: {fileID: 0}
   Tangerine: {fileID: 0}
-  ChosenDog: {fileID: 0}
+  ChosenDog: {fileID: 846518260}
   currentDog: Ethel
   ButtonName: {fileID: 1273613595}
   GameManager: {fileID: 0}
@@ -1405,6 +1408,7 @@ MonoBehaviour:
   honeyButton: 0
   tanButton: 0
   continueButton: 0
+  switchTestButton: 0
 --- !u!1 &1752675336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1981,7 +1985,7 @@ MonoBehaviour:
   Ethel: {fileID: 0}
   Honey: {fileID: 846518257}
   Tangerine: {fileID: 0}
-  ChosenDog: {fileID: 0}
+  ChosenDog: {fileID: 846518260}
   currentDog: Ethel
   ButtonName: {fileID: 1994350130}
   GameManager: {fileID: 0}
@@ -1992,6 +1996,7 @@ MonoBehaviour:
   honeyButton: 0
   tanButton: 0
   continueButton: 0
+  switchTestButton: 0
 --- !u!1001 &4047471300465755655
 PrefabInstance:
   m_ObjectHideFlags: 0
