@@ -41,52 +41,99 @@ public class Collar : MonoBehaviour
     [SerializeField] private SpriteRenderer CollarSprite;
     [SerializeField] private Button DogSwitchTest;
     [SerializeField] private Dog Ethel;
+    [SerializeField] private SpriteRenderer DogSprite;
 
     //changes it to the outfits referenced in the method name
 
     void cuteOutift()
     {
         CollarSprite.sprite = spriteArray[0];
+        CutePoints = 100;
+        CoolPoints = 15;
+        SmartPoints = 15;
+        FunPoints = 75;
+        Name = "Flower collar";
     }
 
     void cuteOutfitS()
     {
         CollarSprite.sprite = spriteArray[1];
+        CutePoints = 100;
+        CoolPoints = 15;
+        SmartPoints = 15;
+        FunPoints = 75;
+        Name = "Flower collar";
     }
 
     void coolOutfit()
     {
         CollarSprite.sprite = spriteArray[2];
+        CutePoints = 30;
+        CoolPoints = 100;
+        SmartPoints = 74;
+        FunPoints = 40;
+        Name = "Bandana";
     }
 
     void coolOutfitS()
     {
         CollarSprite.sprite = spriteArray[3];
+        CutePoints = 30;
+        CoolPoints = 100;
+        SmartPoints = 74;
+        FunPoints = 40;
+        Name = "Bandana";
     }
 
     void smartOutfit()
     {
         CollarSprite.sprite = spriteArray[4];
+        CutePoints = 40;
+        CoolPoints = 75;
+        SmartPoints = 100;
+        FunPoints = 15;
+        Name = "Tie";
     }
 
     void smartOutfitS()
     {
         CollarSprite.sprite = spriteArray[6];
+        CollarSprite.sprite = spriteArray[4];
+        CutePoints = 40;
+        CoolPoints = 75;
+        SmartPoints = 100;
+        FunPoints = 15;
+        Name = "Tie";
     }
 
     void funOutfit()
     {
         CollarSprite.sprite = spriteArray[7];
+        CutePoints = 60;
+        CoolPoints = 10;
+        SmartPoints = 20;
+        FunPoints = 100;
+        Name = "Frills";
     }
 
     void funOutfitS()
     {
         CollarSprite.sprite = spriteArray[7];
+        CutePoints = 60;
+        CoolPoints = 10;
+        SmartPoints = 20;
+        FunPoints = 100;
+        Name = "Frills";
     }
 
     void ReturnToDefault()
     {
         CollarSprite.sprite = null;
+        CutePoints = 10;
+        CoolPoints = 10;
+        SmartPoints = 10;
+        FunPoints = 10;
+        Name = "N/A";
     }
 
     private void Update()

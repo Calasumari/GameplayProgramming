@@ -41,52 +41,98 @@ public class Accessory : MonoBehaviour
     [SerializeField] private SpriteRenderer AccessorySprite;
     [SerializeField] private Button DogSwitchTest;
     [SerializeField] private Dog Ethel;
+    [SerializeField] private SpriteRenderer DogSprite;
 
     //changes it to the outfits referenced in the method name
 
     void cuteOutift()
     {
         AccessorySprite.sprite = spriteArray[0];
+        CutePoints = 100;
+        CoolPoints = 10;
+        SmartPoints = 10;
+        FunPoints = 75;
+        Name = "Wand";
     }
 
     void cuteOutfitS()
     {
         AccessorySprite.sprite = spriteArray[1];
+        CutePoints = 100;
+        CoolPoints = 10;
+        SmartPoints = 10;
+        FunPoints = 75;
+        Name = "Wand";
     }
 
     void coolOutfit()
     {
         AccessorySprite.sprite = spriteArray[2];
+        CutePoints = 10;
+        CoolPoints = 100;
+        SmartPoints = 10;
+        FunPoints = 20;
+        Name = "Cool chain";
     }
 
     void coolOutfitS()
     {
         AccessorySprite.sprite = spriteArray[3];
+        CutePoints = 10;
+        CoolPoints = 100;
+        SmartPoints = 10;
+        FunPoints = 20;
+        Name = "Cool chain";
     }
 
     void smartOutfit()
     {
         AccessorySprite.sprite = spriteArray[4];
+        CutePoints = 20;
+        CoolPoints = 20;
+        SmartPoints = 100;
+        FunPoints = 10;
+        Name = "Bag";
     }
 
     void smartOutfitS()
     {
         AccessorySprite.sprite = spriteArray[6];
+        CutePoints = 10;
+        CoolPoints = 20;
+        SmartPoints = 100;
+        FunPoints = 10;
+        Name = "Bag";
     }
 
     void funOutfit()
     {
         AccessorySprite.sprite = spriteArray[7];
+        CutePoints = 50;
+        CoolPoints = 10;
+        SmartPoints = 10;
+        FunPoints = 100;
+        Name = "Balls";
     }
 
     void funOutfitS()
     {
         AccessorySprite.sprite = spriteArray[7];
+        CutePoints = 50;
+        CoolPoints = 10;
+        SmartPoints = 10;
+        FunPoints = 100;
+        Name = "Balls";
     }
 
     void ReturnToDefault()
     {
         AccessorySprite.sprite = null;
+        CutePoints = 0;
+        CoolPoints = 0;
+        SmartPoints = 0;
+        FunPoints = 0;
+        Name = "N/A";
     }
 
 

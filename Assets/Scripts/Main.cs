@@ -9,7 +9,7 @@ public class Main : MonoBehaviour
     public int FunPoints;
     public int SmartPoints;
     public string Name;
-    public string Type;
+    public string Type = "Main";
 
     // started as seperate scripts for every clothing but the maths manager means i can reduce it to one
     // all the code already uses "cute clothing" in scripts so i won't change the name
@@ -40,52 +40,99 @@ public class Main : MonoBehaviour
     [SerializeField] private SpriteRenderer MainSprite;
     [SerializeField] private Button DogSwitchTest;
     [SerializeField] private Dog Ethel;
+    [SerializeField] private SpriteRenderer DogSprite;
 
     //changes it to the outfits referenced in the method name 
 
     void cuteOutift()
     {
         MainSprite.sprite = spriteArray[0];
+        CutePoints = 100;
+        CoolPoints = 40;
+        SmartPoints = 30;
+        FunPoints = 75;
+        Name = "Skirt and bow";
     }
 
     void cuteOutfitS()
     {
         MainSprite.sprite = spriteArray[1];
+        CutePoints = 100;
+        CoolPoints = 40;
+        SmartPoints = 30;
+        FunPoints = 75;
+        Name = "Skirt and bow";
     }
 
     void coolOutfit()
     {
         MainSprite.sprite = spriteArray[2];
+        CutePoints = 20;
+        CoolPoints = 100;
+        SmartPoints = 50;
+        FunPoints = 10;
+        Name = "Black skirt";
     }
 
     void coolOutfitS()
     {
         MainSprite.sprite = spriteArray[3];
+        CutePoints = 20;
+        CoolPoints = 100;
+        SmartPoints = 50;
+        FunPoints = 10;
+        Name = "Black skirt";
     }
 
     void smartOutfit()
     {
         MainSprite.sprite = spriteArray[4];
+        CutePoints = 30;
+        CoolPoints = 40;
+        SmartPoints = 100;
+        FunPoints = 10;
+        Name = "Smart Skirt";
     }
 
     void smartOutfitS()
     {
         MainSprite.sprite = spriteArray[6];
+        CutePoints = 30;
+        CoolPoints = 40;
+        SmartPoints = 100;
+        FunPoints = 10;
+        Name = "Smart Skirt";
     }
 
     void funOutfit()
     {
         MainSprite.sprite = spriteArray[7];
+        CutePoints = 75;
+        CoolPoints = 15;
+        SmartPoints = 10;
+        FunPoints = 100;
+        Name = "Clown Suit";
     }
 
     void funOutfitS()
     {
         MainSprite.sprite = spriteArray[7];
+        CutePoints = 75;
+        CoolPoints = 15;
+        SmartPoints = 10;
+        FunPoints = 100;
+        Name = "Clown Suit";
+
     }
 
     void ReturnToDefault()
     {
         MainSprite.sprite = null;
+        CutePoints = 10;
+        CoolPoints = 10;
+        SmartPoints = 10;
+        FunPoints = 10;
+        Name = "N/A";
     }
 
     private void Update()

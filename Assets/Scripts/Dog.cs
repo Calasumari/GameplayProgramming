@@ -45,6 +45,18 @@ public class Dog : MonoBehaviour
     void Start()
     {
         Debug.Log(message: "Current Dog is " + CurrentDog);
+        if (CurrentDog == 0)
+        {
+            ChangeSprite3();
+        }
+        else if (CurrentDog == 1)
+        {
+            ChangeSprite();
+        }
+        else if (CurrentDog == 2)
+        {
+            ChangeSprite2();
+        }
     }
 
     public Sprite[] spriteArray;
@@ -57,6 +69,12 @@ public class Dog : MonoBehaviour
         //changes it to honey
         //if playerprefs.dog == 1
         CurrentObject.sprite = spriteArray[1];
+        Name = "Honey";
+        Breed = "Golden Retriever";
+        Colour = "Gold";
+        Size = "big";
+        Age = 2;
+        Friendship = 0.00;
     }
 
     void ChangeSprite2()
@@ -64,6 +82,12 @@ public class Dog : MonoBehaviour
         //Changes it to Tangerine
         //if playerprefs.dog == 2
         CurrentObject.sprite = spriteArray[2];
+        Name = "Tangerine";
+        Breed = "Corgi";
+        Colour = "Orange";
+        Size = "small";
+        Age = 2;
+        Friendship = 0.00;
 
     }
 
@@ -72,12 +96,24 @@ public class Dog : MonoBehaviour
         //Changes it to Ethel
         //if playerprefs.dog == 0
         CurrentObject.sprite = spriteArray[0];
+        Name = "Ethel";
+        Breed = "Akita";
+        Colour = "Black and white";
+        Size = "big";
+        Age = 2;
+        Friendship = 0.00;
 
     }
 
     void ReturnToDefault()
     {
         CurrentObject.sprite = spriteArray[0];
+        Name = "Ethel";
+        Breed = "Akita";
+        Colour = "Black and white";
+        Size = "big";
+        Age = 2;
+        Friendship = 0.00;
     }
 
 
