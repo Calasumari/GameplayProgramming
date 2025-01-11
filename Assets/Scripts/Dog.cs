@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Dog : MonoBehaviour
 {
+
+    [SerializeField] private SceneName currentScene;
     public GameObject DogObject;
 
     public string Name;
@@ -12,6 +16,8 @@ public class Dog : MonoBehaviour
     public string Size;
     public int Age;
     public double Friendship;
+
+    public int dogIndex = 0;
 
     string dogKey = "Dog";
 
@@ -45,51 +51,17 @@ public class Dog : MonoBehaviour
     void Start()
     {
         Debug.Log(message: "Current Dog is " + CurrentDog);
-        if (CurrentDog == 0)
-        {
-            ChangeSprite3();
-        }
-        else if (CurrentDog == 1)
-        {
-            ChangeSprite();
-        }
-        else if (CurrentDog == 2)
-        {
-            ChangeSprite2();
-        }
+
+        int dognumber = CurrentDog;
+        CurrentObject.sprite = spriteArray[dognumber];
+
+        Debug.Log("Awake:" + SceneManager.GetActiveScene().name);
+
     }
 
     public Sprite[] spriteArray;
 
     [SerializeField] private SpriteRenderer CurrentObject;
-    [SerializeField] private Button DogSwitchTest;
-
-    void ChangeSprite()
-    {
-        //changes it to honey
-        //if playerprefs.dog == 1
-        CurrentObject.sprite = spriteArray[1];
-        Name = "Honey";
-        Breed = "Golden Retriever";
-        Colour = "Gold";
-        Size = "big";
-        Age = 2;
-        Friendship = 0.00;
-    }
-
-    void ChangeSprite2()
-    {
-        //Changes it to Tangerine
-        //if playerprefs.dog == 2
-        CurrentObject.sprite = spriteArray[2];
-        Name = "Tangerine";
-        Breed = "Corgi";
-        Colour = "Orange";
-        Size = "small";
-        Age = 2;
-        Friendship = 0.00;
-
-    }
 
     void ChangeSprite3()
     {
@@ -105,9 +77,33 @@ public class Dog : MonoBehaviour
 
     }
 
+    void ChangeSprite()
+    {
+        //changes it to honey
+        //if playerprefs.dog == 1
+        Name = "Honey";
+        Breed = "Golden Retriever";
+        Colour = "Gold";
+        Size = "big";
+        Age = 2;
+        Friendship = 0.00;
+    }
+
+    void ChangeSprite2()
+    {
+        //Changes it to Tangerine
+        //if playerprefs.dog == 2
+        Name = "Tangerine";
+        Breed = "Corgi";
+        Colour = "Orange";
+        Size = "small";
+        Age = 2;
+        Friendship = 0.00;
+
+    }
+
     void ReturnToDefault()
     {
-        CurrentObject.sprite = spriteArray[0];
         Name = "Ethel";
         Breed = "Akita";
         Colour = "Black and white";
@@ -119,21 +115,94 @@ public class Dog : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+
+        //old way of doing this 
+
+        //if (Input.GetKeyDown(KeyCode.LeftArrow))
+        //{
+        //    ChangeSprite();
+        //}
+        //if (Input.GetKeyDown(KeyCode.DownArrow))
+        //{
+        //    ChangeSprite2();
+        //}
+        //if (Input.GetKeyDown(KeyCode.RightArrow))
+        //{
+        //    ChangeSprite3();
+        //}
+        //if (Input.GetKeyDown(KeyCode.Return))
+        //{
+        //    ReturnToDefault();
+        //}
+        if (currentScene.sceneName == "Select")
         {
-            ChangeSprite();
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                if (dogIndex >= spriteArray.Length) return;
+                dogIndex++;
+                ChangeDogSprite(dogIndex);
+                SetDog(dogIndex);
+            }
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                if (dogIndex <= 0) return;
+                dogIndex--;
+                ChangeDogSprite(dogIndex);
+                SetDog(dogIndex);
+            }
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        
+    }
+
+    private void ChangeDogSprite(int i)
+    {
+        if (i < spriteArray.Length)
         {
-            ChangeSprite2();
+            CurrentObject.sprite = spriteArray[i];
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        else
         {
-            ChangeSprite3();
+            CurrentObject.sprite = spriteArray[0];
+            dogIndex = 0;
         }
-        if (Input.GetKeyDown(KeyCode.Return))
+
+        switch(i)
         {
-            ReturnToDefault();
+            case 0:
+                Name = "Ethel";
+                Breed = "Akita";
+                Colour = "Black and white";
+                Size = "big";
+                Age = 2;
+                Friendship = 0.00;
+                break;
+
+            case 1:
+                Name = "Honey";
+                Breed = "Golden Retriever";
+                Colour = "Gold";
+                Size = "big";
+                Age = 2;
+                Friendship = 0.00;
+                break;
+
+            case 2:
+                Name = "Tangerine";
+                Breed = "Corgi";
+                Colour = "Orange";
+                Size = "small";
+                Age = 2;
+                Friendship = 0.00;
+                break;
+
+            default:
+                Name = "Ethel";
+                Breed = "Akita";
+                Colour = "Black and white";
+                Size = "big";
+                Age = 2;
+                Friendship = 0.00;
+                break;
         }
     }
 }

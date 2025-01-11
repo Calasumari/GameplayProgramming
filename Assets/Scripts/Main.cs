@@ -11,36 +11,50 @@ public class Main : MonoBehaviour
     public string Name;
     public string Type = "Main";
 
-    // started as seperate scripts for every clothing but the maths manager means i can reduce it to one
-    // all the code already uses "cute clothing" in scripts so i won't change the name
+    [SerializeField] private SceneName CurrentScene;
+
+    // started as seperate scripts for every type of clothing but the maths manager means i can reduce it to three - one for each type
+
+    public int CurrentMain { get; set; }
+
+    string mainKey = "main";
+
+    private void Awake()
+    {
+        CurrentMain = PlayerPrefs.GetInt(mainKey);
+    }
+
+    public void SetItem(int main)
+    {
+        PlayerPrefs.SetInt(mainKey, main);
+    }
 
 
     // Start is called before the first frame update
     void Start()
     {
         MainSprite.sprite = null;
-    }
-
-    // Update is called once per frame
-  
-
-    public double PointsCalculation()
-    {
-        //might bit be needed, here as backup only
-        double Cute = CutePoints * 1.2;
-        double Cool = CoolPoints * 0.2;
-        double Fun = FunPoints * 0.2;
-        double Smart = SmartPoints * 0.2;
-
-        return (Cute + Cool + Fun + Smart);
+        if (CurrentScene.sceneName == "Home" | CurrentScene.sceneName == "Select")
+        {
+            MainSprite.sprite = null;
+        }
+        else
+        {
+            if (CurrentMain >= 8)
+            {
+                MainSprite.sprite = null;
+            }
+            else
+            {
+                MainSprite.sprite = spriteArray[CurrentMain];
+            }
+            
+        }
     }
 
     public Sprite[] spriteArray;
 
     [SerializeField] private SpriteRenderer MainSprite;
-    [SerializeField] private Button DogSwitchTest;
-    [SerializeField] private Dog Ethel;
-    [SerializeField] private SpriteRenderer DogSprite;
 
     //changes it to the outfits referenced in the method name 
 
@@ -52,6 +66,7 @@ public class Main : MonoBehaviour
         SmartPoints = 30;
         FunPoints = 75;
         Name = "Skirt and bow";
+        SetItem(0);
     }
 
     void cuteOutfitS()
@@ -62,6 +77,7 @@ public class Main : MonoBehaviour
         SmartPoints = 30;
         FunPoints = 75;
         Name = "Skirt and bow";
+        SetItem(1);
     }
 
     void coolOutfit()
@@ -72,6 +88,7 @@ public class Main : MonoBehaviour
         SmartPoints = 50;
         FunPoints = 10;
         Name = "Black skirt";
+        SetItem(2);
     }
 
     void coolOutfitS()
@@ -82,6 +99,7 @@ public class Main : MonoBehaviour
         SmartPoints = 50;
         FunPoints = 10;
         Name = "Black skirt";
+        SetItem(3);
     }
 
     void smartOutfit()
@@ -92,26 +110,29 @@ public class Main : MonoBehaviour
         SmartPoints = 100;
         FunPoints = 10;
         Name = "Smart Skirt";
+        SetItem(4);
     }
 
     void smartOutfitS()
     {
-        MainSprite.sprite = spriteArray[6];
+        MainSprite.sprite = spriteArray[5];
         CutePoints = 30;
         CoolPoints = 40;
         SmartPoints = 100;
         FunPoints = 10;
         Name = "Smart Skirt";
+        SetItem(5);
     }
 
     void funOutfit()
     {
-        MainSprite.sprite = spriteArray[7];
+        MainSprite.sprite = spriteArray[6];
         CutePoints = 75;
         CoolPoints = 15;
         SmartPoints = 10;
         FunPoints = 100;
         Name = "Clown Suit";
+        SetItem(6);
     }
 
     void funOutfitS()
@@ -122,6 +143,7 @@ public class Main : MonoBehaviour
         SmartPoints = 10;
         FunPoints = 100;
         Name = "Clown Suit";
+        SetItem(7);
 
     }
 
@@ -133,6 +155,7 @@ public class Main : MonoBehaviour
         SmartPoints = 10;
         FunPoints = 10;
         Name = "N/A";
+        SetItem(8);
     }
 
     private void Update()

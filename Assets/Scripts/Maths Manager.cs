@@ -19,13 +19,19 @@ public class MathsManager : MonoBehaviour
     [SerializeField] private Button Pet;
     [SerializeField] private Button Play;
     [SerializeField] private Button Feed;
+    [SerializeField] private Button CuteShow;
+    [SerializeField] private Button CoolShow;
+    [SerializeField] private Button SmartShow;
+    [SerializeField] private Button FunShow;
 
-    public string[] showTypes = { "Cool", "Cute", "Fun", "Smart" };
+    [SerializeField] private SceneName CurrentScene;
+    public int mainP;
+    public int collarP;
+    public int bonus;
+    public int finalScore;
 
-    
+    public string[] showTypes = { "Cute", "Cool", "Smart", "Cute" };
 
-    //public System.Random random = new System.Random();
-    //int showSelection = random.Next(0,4);
 
     public string tempShowType = "Smart";
 
@@ -35,23 +41,61 @@ public class MathsManager : MonoBehaviour
     {
 
         Debug.Log(message: MainPoints());
+        if (CurrentScene.sceneName == "Show")
+        {
+            MainPoints();
+            CollarPoints();
+            AccessoryBonus();
+            Debug.Log(MainPoints());
+            Debug.Log(CollarPoints());
+            Debug.Log(AccessoryBonus());
+            SetScore(FinalScore());
+        }
+        if (CurrentScene.sceneName == "Home")
+        {
+            SetScore(0);
+        }
 
     }
+
+
+    //setting the score for other variables to be able to access it with data persistence
+
+    
+    string scoreKey = "Score";
+
+    public int scoreIndex = 0;
+
+    public int CurrentScore { get; set; }
+
+    private void Awake()
+    {              
+        
+        CurrentScore = PlayerPrefs.GetInt(scoreKey);
+    }
+
+    public void SetScore(int score)
+    {
+        PlayerPrefs.SetInt(scoreKey, score);
+    }
+    
 
     // Update is called once per frame
     void Update()
     {
-        // if ((Pet.petButton == "Pressed")|(Play.playButton == "Pressed")|(Feed.feedButton == "Pressed")) 
-        if (Pet.petPressed | Pet.playPressed | Pet.feedPressed)
+        if (CurrentScene.sceneName == "Home")
         {
-            Debug.Log(message: "Points are " + MainPoints() + ".");
-            Debug.Log(message: "Points are " + CollarPoints() + ".");
-            Debug.Log(message: "Bonus is " + AccessoryBonus() + ".");
-            Debug.Log(message: "Final Points are " + FinalScore() + ".");
-            Pet.petPressed = false;
-            Pet.playPressed = false;
-            Pet.feedPressed = false;
+            if (Pet.petPressed | Pet.playPressed | Pet.feedPressed)
+            {
+                Debug.Log(message: "Points are " + MainPoints() + ".");
+                Debug.Log(message: "Points are " + CollarPoints() + ".");
+                Debug.Log(message: "Bonus is " + AccessoryBonus() + ".");
+                Debug.Log(message: "Final Points are " + FinalScore() + ".");
+                Pet.petPressed = false;
+                Pet.playPressed = false;
+                Pet.feedPressed = false;
 
+            }
         }
     }
 
@@ -233,8 +277,11 @@ public class MathsManager : MonoBehaviour
         return addPoints;
     }
 
-    public double FinalScore()
+    public int FinalScore()
     {
-        return MainPoints() + CollarPoints() * AccessoryBonus();
+        double finalPoints = MainPoints() + CollarPoints() * AccessoryBonus();
+        int score;
+        score = Convert.ToInt32(finalPoints);
+        return score;
     }
 }

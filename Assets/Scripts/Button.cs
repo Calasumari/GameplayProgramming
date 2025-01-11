@@ -6,16 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class Button : MonoBehaviour
 {
-    /* private static Button instance;
-    public static Button Instance
-    {
-        get
-        {
-            if (instance == null) instance = GameObject.FindObjectOfType<Button>();
-            return instance;
-        }
-    } */
-
     public GameObject Ethel;
     public GameObject Honey;
     public GameObject Tangerine;
@@ -27,7 +17,7 @@ public class Button : MonoBehaviour
     [SerializeField] private Button ButtonName;
     [SerializeField] private GameManager GameManager;
 
-    public bool petPressed, playPressed, feedPressed, ethelButton, honeyButton, tanButton, continueButton, switchTestButton = false;
+    public bool petPressed, playPressed, feedPressed, continueButton, cuteButton, coolButton, smartButton, funButton, switchTestButton = false;
 
     public void ButtonTest()
     {
@@ -51,46 +41,30 @@ public class Button : MonoBehaviour
             feedPressed = !feedPressed;
         }
 
-
-        if (ButtonName.name == "Ethel")
+        if (ButtonName.name == "Cute")
         {
-            GameManager.Instance.selectedDog = Ethel;
-            Debug.Log(message: "Ethel button pressed");
-            currentDog = "Ethel";
-            ChosenDog.SetDog(0);
-            
+            Debug.Log(ButtonName.name);
         }
 
-
-        if (ButtonName.name == "Honey")
+        if (ButtonName.name == "Cool")
         {
-            Debug.Log(message: "Honey Button Pressed");
-            GameManager.Instance.selectedDog = Honey;
-            honeyButton = !honeyButton;
-            currentDog = "Honey";
-            ChosenDog.SetDog(1);
+            Debug.Log(ButtonName.name);
+        }
+        
+        if (ButtonName.name == "Smart")
+        {
+            Debug.Log(ButtonName.name);
         }
 
-        if (ButtonName.name == "Tangerine")
+        if (ButtonName.name == "Fun")
         {
-            Debug.Log(message: "Tangerine Button Pressed");
-            GameManager.Instance.selectedDog = Tangerine;
-            tanButton = !tanButton;
-            currentDog = "Tangerine";
-            ChosenDog.SetDog(2);
+            Debug.Log(ButtonName.name);
         }
 
         if (ButtonName.name == "Continue")
         {
             SceneManager.LoadScene("Home Scene");
         }
-
-        /* if (ButtonName.name == "DogSwitchTest")
-        {
-            Debug.Log(message: " Switch test pressed ");
-            switchTestButton = !switchTestButton;
-
-        } */
 
         else if (ButtonName.name == "Show")
         {
@@ -100,31 +74,6 @@ public class Button : MonoBehaviour
 
     }
 
-    /* private void Awake()
-    {
-        if (instance)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(gameObject);
-        }
-
-    }
-
-    /*public void HideButton()
-    {
-
-    }
-   
-    public void ReturnButton()
-    {
-        if (ButtonName.name == "Continue")
-        {
-            X
-        }
-    }*/
     public void ButtonTest2()
     {
         Debug.Log(message: "Button Pressed again");

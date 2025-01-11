@@ -11,37 +11,52 @@ public class Accessory : MonoBehaviour
     public string Name;
     public string Type;
 
-    enum AccesoryName { Placeholder1, Placeholder2 };
+    [SerializeField] private SceneName CurrentScene;
 
-    // started as seperate scripts for every type of clothing but the maths manager means i can reduce it to one for each type
+    // started as seperate scripts for every type of clothing but the maths manager means i can reduce it to three - one for each type
+
+    public int CurrentAcc { get; set; }
+
+    string accKey = "acc";
+
+    private void Awake()
+    {
+        CurrentAcc = PlayerPrefs.GetInt(accKey);
+    }
+
+    public void SetItem(int accessory)
+    {
+        PlayerPrefs.SetInt(accKey, accessory);
+    }
 
 
     // Start is called before the first frame update
     void Start()
     {
         AccessorySprite.sprite = null;
-    }
-
-    // Update is called once per frame
-
-
-    public double PointsCalculation()
-    {
-        //might bit be needed, here as backup only
-        double Cute = CutePoints * 1.2;
-        double Cool = CoolPoints * 0.2;
-        double Fun = FunPoints * 0.2;
-        double Smart = SmartPoints * 0.2;
-
-        return (Cute + Cool + Fun + Smart);
+        if (CurrentScene.sceneName == "Home" | CurrentScene.sceneName == "Select")
+        {
+            AccessorySprite.sprite = null;
+        }
+        else
+        {
+            if (CurrentAcc >= 8)
+            {
+                AccessorySprite.sprite = null;
+            }
+            else
+            {
+                {
+                    AccessorySprite.sprite = spriteArray[CurrentAcc];
+                }
+            }
+            
+        }
     }
 
     public Sprite[] spriteArray;
 
     [SerializeField] private SpriteRenderer AccessorySprite;
-    [SerializeField] private Button DogSwitchTest;
-    [SerializeField] private Dog Ethel;
-    [SerializeField] private SpriteRenderer DogSprite;
 
     //changes it to the outfits referenced in the method name
 
@@ -53,6 +68,7 @@ public class Accessory : MonoBehaviour
         SmartPoints = 10;
         FunPoints = 75;
         Name = "Wand";
+        SetItem(0);
     }
 
     void cuteOutfitS()
@@ -63,6 +79,7 @@ public class Accessory : MonoBehaviour
         SmartPoints = 10;
         FunPoints = 75;
         Name = "Wand";
+        SetItem(1);
     }
 
     void coolOutfit()
@@ -73,6 +90,7 @@ public class Accessory : MonoBehaviour
         SmartPoints = 10;
         FunPoints = 20;
         Name = "Cool chain";
+        SetItem(2);
     }
 
     void coolOutfitS()
@@ -83,6 +101,7 @@ public class Accessory : MonoBehaviour
         SmartPoints = 10;
         FunPoints = 20;
         Name = "Cool chain";
+        SetItem(3);
     }
 
     void smartOutfit()
@@ -93,26 +112,29 @@ public class Accessory : MonoBehaviour
         SmartPoints = 100;
         FunPoints = 10;
         Name = "Bag";
+        SetItem(4);
     }
 
     void smartOutfitS()
     {
-        AccessorySprite.sprite = spriteArray[6];
+        AccessorySprite.sprite = spriteArray[5];
         CutePoints = 10;
         CoolPoints = 20;
         SmartPoints = 100;
         FunPoints = 10;
         Name = "Bag";
+        SetItem(5);
     }
 
     void funOutfit()
     {
-        AccessorySprite.sprite = spriteArray[7];
+        AccessorySprite.sprite = spriteArray[6];
         CutePoints = 50;
         CoolPoints = 10;
         SmartPoints = 10;
         FunPoints = 100;
         Name = "Balls";
+        SetItem(6);
     }
 
     void funOutfitS()
@@ -123,6 +145,7 @@ public class Accessory : MonoBehaviour
         SmartPoints = 10;
         FunPoints = 100;
         Name = "Balls";
+        SetItem(7);
     }
 
     void ReturnToDefault()
@@ -133,6 +156,7 @@ public class Accessory : MonoBehaviour
         SmartPoints = 0;
         FunPoints = 0;
         Name = "N/A";
+        SetItem(8);
     }
 
 
