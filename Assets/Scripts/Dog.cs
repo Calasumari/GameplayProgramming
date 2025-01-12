@@ -53,7 +53,11 @@ public class Dog : MonoBehaviour
         Debug.Log(message: "Current Dog is " + CurrentDog);
 
         int dognumber = CurrentDog;
-        CurrentObject.sprite = spriteArray[dognumber];
+        if (dognumber <= 2|dognumber > 0)
+        {
+            CurrentObject.sprite = spriteArray[dognumber];
+        }
+        
 
         Debug.Log("Awake:" + SceneManager.GetActiveScene().name);
 
@@ -63,54 +67,6 @@ public class Dog : MonoBehaviour
 
     [SerializeField] private SpriteRenderer CurrentObject;
 
-    void ChangeSprite3()
-    {
-        //Changes it to Ethel
-        //if playerprefs.dog == 0
-        CurrentObject.sprite = spriteArray[0];
-        Name = "Ethel";
-        Breed = "Akita";
-        Colour = "Black and white";
-        Size = "big";
-        Age = 2;
-        Friendship = 0.00;
-
-    }
-
-    void ChangeSprite()
-    {
-        //changes it to honey
-        //if playerprefs.dog == 1
-        Name = "Honey";
-        Breed = "Golden Retriever";
-        Colour = "Gold";
-        Size = "big";
-        Age = 2;
-        Friendship = 0.00;
-    }
-
-    void ChangeSprite2()
-    {
-        //Changes it to Tangerine
-        //if playerprefs.dog == 2
-        Name = "Tangerine";
-        Breed = "Corgi";
-        Colour = "Orange";
-        Size = "small";
-        Age = 2;
-        Friendship = 0.00;
-
-    }
-
-    void ReturnToDefault()
-    {
-        Name = "Ethel";
-        Breed = "Akita";
-        Colour = "Black and white";
-        Size = "big";
-        Age = 2;
-        Friendship = 0.00;
-    }
 
 
     private void Update()
@@ -134,6 +90,7 @@ public class Dog : MonoBehaviour
         //{
         //    ReturnToDefault();
         //}
+
         if (currentScene.sceneName == "Select")
         {
             if (Input.GetKeyDown(KeyCode.RightArrow))

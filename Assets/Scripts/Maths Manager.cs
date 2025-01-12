@@ -41,14 +41,14 @@ public class MathsManager : MonoBehaviour
     {
 
         Debug.Log(message: MainPoints());
-        if (CurrentScene.sceneName == "Show")
+        if (CurrentScene.sceneName == "Fashion Show")
         {
             MainPoints();
             CollarPoints();
             AccessoryBonus();
-            Debug.Log(MainPoints());
-            Debug.Log(CollarPoints());
-            Debug.Log(AccessoryBonus());
+            Debug.Log("Maths Manager " + MainPoints());
+            Debug.Log("Maths Manager " + CollarPoints());
+            Debug.Log("Maths Manager " + AccessoryBonus());
             SetScore(FinalScore());
         }
         if (CurrentScene.sceneName == "Home")

@@ -17,7 +17,7 @@ public class Collar : MonoBehaviour
 
     public int CurrentCollar { get; set; }
 
-    string collarKey = "collar";
+    string collarKey = "Collar";
 
     private void Awake()
     {
@@ -33,22 +33,48 @@ public class Collar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CollarSprite.sprite = null;
-        if (CurrentScene.sceneName == "Home"|CurrentScene.sceneName == "Select")
+        if (CurrentScene.sceneName == "Home" | CurrentScene.sceneName == "Select" | CurrentScene.sceneName == "Wardrobe")
         {
-            CollarSprite.sprite = null;
-        } 
+            ReturnToDefault();
+        }
         else
         {
-            if (CurrentCollar >= 8)
+            if (CurrentCollar == 0)
             {
-                CollarSprite.sprite = null;
+                cuteOutift();
+            }
+            else if (CurrentCollar == 1)
+            {
+                cuteOutfitS();
+            }
+            else if (CurrentCollar == 2)
+            {
+                coolOutfit();
+            }
+            else if (CurrentCollar == 3)
+            {
+                coolOutfitS();
+            }
+            else if (CurrentCollar == 4)
+            {
+                smartOutfit();
+            }
+            else if (CurrentCollar == 5)
+            {
+                smartOutfitS();
+            }
+            else if (CurrentCollar == 6)
+            {
+                funOutfit();
+            }
+            else if (CurrentCollar == 7)
+            {
+                funOutfitS();
             }
             else
             {
-                CollarSprite.sprite = spriteArray[CurrentCollar];
+                ReturnToDefault();
             }
-            
         }
     }
 

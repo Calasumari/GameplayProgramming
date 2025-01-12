@@ -17,7 +17,7 @@ public class Accessory : MonoBehaviour
 
     public int CurrentAcc { get; set; }
 
-    string accKey = "acc";
+    string accKey = "Acc";
 
     private void Awake()
     {
@@ -33,24 +33,48 @@ public class Accessory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AccessorySprite.sprite = null;
-        if (CurrentScene.sceneName == "Home" | CurrentScene.sceneName == "Select")
+        if (CurrentScene.sceneName == "Home" | CurrentScene.sceneName == "Select" | CurrentScene.sceneName == "Wardrobe")
         {
-            AccessorySprite.sprite = null;
+            ReturnToDefault();
         }
         else
         {
-            if (CurrentAcc >= 8)
+            if (CurrentAcc == 0)
             {
-                AccessorySprite.sprite = null;
+                cuteOutift();
+            }
+            else if (CurrentAcc == 1)
+            {
+                cuteOutfitS();
+            }
+            else if (CurrentAcc == 2)
+            {
+                coolOutfit();
+            }
+            else if (CurrentAcc == 3)
+            {
+                coolOutfitS();
+            }
+            else if (CurrentAcc == 4)
+            {
+                smartOutfit();
+            }
+            else if (CurrentAcc == 5)
+            {
+                smartOutfitS();
+            }
+            else if (CurrentAcc == 6)
+            {
+                funOutfit();
+            }
+            else if (CurrentAcc == 7)
+            {
+                funOutfitS();
             }
             else
             {
-                {
-                    AccessorySprite.sprite = spriteArray[CurrentAcc];
-                }
+                ReturnToDefault();
             }
-            
         }
     }
 

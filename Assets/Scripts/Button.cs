@@ -17,6 +17,7 @@ public class Button : MonoBehaviour
     [SerializeField] private Button ButtonName;
     [SerializeField] private GameManager GameManager;
     [SerializeField] private SceneName LoadedScene;
+    [SerializeField] private ScoreText DisplayText;
 
     public bool petPressed, playPressed, feedPressed, continueButton, cuteButton, coolButton, smartButton, funButton, switchTestButton = false;
 
@@ -75,11 +76,14 @@ public class Button : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("Home");
+                SceneManager.LoadScene("Home Scene");
             }
             
         }
-
+        if (ButtonName.name == "ScoreShow")
+        {
+            //DisplayText.scoreGet();
+        }
         if (ButtonName.name == "Wardrobe")
         {
             SceneManager.LoadScene("Wardrobe");

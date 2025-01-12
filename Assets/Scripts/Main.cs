@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Main : MonoBehaviour
@@ -17,7 +18,7 @@ public class Main : MonoBehaviour
 
     public int CurrentMain { get; set; }
 
-    string mainKey = "main";
+    string mainKey = "Main";
 
     private void Awake()
     {
@@ -33,24 +34,51 @@ public class Main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MainSprite.sprite = null;
-        if (CurrentScene.sceneName == "Home" | CurrentScene.sceneName == "Select")
+        if (CurrentScene.sceneName == "Home" | CurrentScene.sceneName == "Select"| CurrentScene.sceneName == "Wardrobe")
         {
-            MainSprite.sprite = null;
+            ReturnToDefault();
         }
         else
         {
-            if (CurrentMain >= 8)
+            if (CurrentMain == 0)
             {
-                MainSprite.sprite = null;
+                cuteOutift();
+            }
+            else if (CurrentMain == 1)
+            {
+                cuteOutfitS();
+            }
+            else if(CurrentMain == 2)
+            {
+                coolOutfit();
+            }
+            else if(CurrentMain == 3)
+            {
+                coolOutfitS();
+            }
+            else if (CurrentMain == 4)
+            {
+                smartOutfit();
+            }
+            else if (CurrentMain == 5)
+            {
+                smartOutfitS();
+            }
+            else if (CurrentMain == 6)
+            {
+                funOutfit();
+            }
+            else if (CurrentMain == 7)
+            {
+                funOutfitS();
             }
             else
             {
-                MainSprite.sprite = spriteArray[CurrentMain];
+                ReturnToDefault();
             }
-            
         }
     }
+
 
     public Sprite[] spriteArray;
 
