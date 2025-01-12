@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fashion Show.unity
     guid: eddad0d9519154247ac47202c2d27445
+  - enabled: 1
+    path: Assets/Scenes/Wardrobe.unity
+    guid: e195ca2341fe21c4ea01f51d0b5d63be
   m_configObjects: {}

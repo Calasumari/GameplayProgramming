@@ -16,13 +16,13 @@ public class DebugChecker : MonoBehaviour
     public int collar;
     public int accessory;
 
-    string dogKey = "dog";
-    string scoreKey = "score";
-    string mainKey = "main";
-    string collarKey = "collar";
-    string accKey = "acc";
+    string dogKey = "Dog";
+    string scoreKey = "Score";
+    string mainKey = "Main";
+    string collarKey = "Collar";
+    string accKey = "Acc";
 
-    private void Awake()
+    void Update()
     {
         dog = PlayerPrefs.GetInt(dogKey);
         score = PlayerPrefs.GetInt(scoreKey);

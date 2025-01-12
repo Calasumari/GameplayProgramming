@@ -16,6 +16,7 @@ public class Button : MonoBehaviour
 
     [SerializeField] private Button ButtonName;
     [SerializeField] private GameManager GameManager;
+    [SerializeField] private SceneName LoadedScene;
 
     public bool petPressed, playPressed, feedPressed, continueButton, cuteButton, coolButton, smartButton, funButton, switchTestButton = false;
 
@@ -64,6 +65,24 @@ public class Button : MonoBehaviour
         if (ButtonName.name == "Continue")
         {
             SceneManager.LoadScene("Home Scene");
+        }
+        
+        if (ButtonName.name == "Back")
+        {
+            if (LoadedScene.sceneName == "Home")
+            {
+                SceneManager.LoadScene("Selection Screen");
+            }
+            else
+            {
+                SceneManager.LoadScene("Home");
+            }
+            
+        }
+
+        if (ButtonName.name == "Wardrobe")
+        {
+            SceneManager.LoadScene("Wardrobe");
         }
 
         else if (ButtonName.name == "Show")

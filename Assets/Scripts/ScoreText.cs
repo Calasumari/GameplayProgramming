@@ -19,12 +19,12 @@ public class ScoreText : MonoBehaviour
     void Update()
     {
         
-        scoreText.SetText(score.ToString());
+        
     }
 
     public void scoreGet()
     {
-        
+        scoreText.SetText(score.ToString());
     }
     void Awake()
     {

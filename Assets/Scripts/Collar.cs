@@ -56,6 +56,7 @@ public class Collar : MonoBehaviour
     public Sprite[] spriteArray;
 
     [SerializeField] private SpriteRenderer CollarSprite;
+
     //changes it to the outfits referenced in the method name
 
     void cuteOutift()
@@ -179,15 +180,15 @@ public class Collar : MonoBehaviour
         {
             smartOutfit();
         }
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.H))
         {
             smartOutfitS();
         }
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.J))
         {
             funOutfit();
         }
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             funOutfitS();
         }
