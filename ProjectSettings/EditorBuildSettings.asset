@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Practice Scene/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Selection Screen.unity
+    guid: 69aaed4451f2cbf4380a236e0965fbdb
+  - enabled: 1
+    path: Assets/Scenes/Home Scene.unity
+    guid: b65cb84b007eac34d943f1fd3eddbafc
+  - enabled: 1
+    path: Assets/Scenes/Fashion Show.unity
+    guid: eddad0d9519154247ac47202c2d27445
+  - enabled: 1
+    path: Assets/Scenes/Wardrobe.unity
+    guid: e195ca2341fe21c4ea01f51d0b5d63be
+  m_configObjects: {}
